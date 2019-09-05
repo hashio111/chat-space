@@ -124,43 +124,6 @@
         }
       }
     }
-    &__form{
-      height: 90px;
-      padding: 20px 40px;
-      background-color: #dddddd;
-      display: flex;
-      box-sizing: border-box;
-      &__new-message{
-        width: 100%;
-        display: flex;
-        &__input-box{
-          display: flex;
-          width: 100%;
-          position: relative;
-          &__text{
-            height: 50px;
-            width: 100%;
-            padding: 0 0 0 10px;
-            border-style: none;
-            display: flex;
-            
-            &__image{
-              position: absolute;
-              right: 10px;
-              top: 10px;
-              font-size: 1.3rem;
-              }
-          }
-        }
-        &__send-button{
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color: $header-button-color;
-          color: white;
-        }
-      }
-    }
+    @include form;
   }
 }

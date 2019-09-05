@@ -8,7 +8,8 @@
         .chat-main__main-header__left-box__group-member
           %p group-member
       .chat-main__main-header__edit-button
-        %p Edit
+        = link_to new_group_path do
+          %p Edit
     .chat-main__messages
       .chat-main__messages__message1
         .chat-main__messages__message1__upper-info
@@ -26,11 +27,4 @@
             %p 2019/09/02(Mon)
         .chat-main__messages__message2__text
           %p さようなら！
-    .chat-main__form 
-      .chat-main__form__new-message
-        %form.chat-main__form__new-message__input-box(action="#")
-          %input.chat-main__form__new-message__input-box__text{:placeholder => "type a message", :type => "text"}
-          %label.chat-main__form__new-message__input-box__text__image{:for => "message_image"}
-            %i.fa.fa-image
-            %input#message_image.chat-main__form__new-message__input-box__image{:style => "display:none", :type => "file"}/
-        %input.chat-main__form__new-message__send-button{:type => "submit", :value => "Send"}/
+    = render 'shared/chat-main_form'
