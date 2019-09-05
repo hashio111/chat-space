@@ -1,0 +1,21 @@
+@mixin side_bar {
+  .chat-side__groups{
+    height: calc(100vh - 100px);
+    background-color: #2f3e51;
+    padding: 0 20px;
+    &__group{
+      padding-top: 20px;
+      &__group-name{
+        font-size: 15px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: $side-font-color;
+      }
+      &__latest-message{
+        font-size: 11px;
+        color: $side-font-color;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
