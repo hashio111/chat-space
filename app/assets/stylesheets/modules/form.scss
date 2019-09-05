@@ -9,7 +9,7 @@
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 110px);
+      width: calc(100% - 115px);
       box-sizing: border-box;
       padding-left: 10px;
       position: relative;
@@ -19,10 +19,10 @@
       width: 100%;
       position: relative;
       &__image {
-        font-size: 20px;
+        font-size: 1.3rem;
         line-height: 50px;
         position: absolute;
-        right: 120px;
+        right: 125px;
       }
       .hidden {
         display: none;
@@ -33,54 +33,11 @@
       border: none;
       color: $white;
       float: right;
-      font-size: 16px;
       height: 50px;
-      margin-left: 15px;
+      width: 100px;
+      margin: 0 0 0 15px;
       padding: 0 30px;
       position: absolute;
     }
   }
 }
-
-
-
-// @mixin form {
-//   &__form{
-//     height: 90px;
-//     padding: 20px 40px;
-//     background-color: #dddddd;
-//     display: flex;
-//     box-sizing: border-box;
-//     &__new-message{
-//       width: 100%;
-//       display: flex;
-//       &__input-box{
-//         display: flex;
-//         width: 100%;
-//         position: relative;
-//         &__text{
-//           height: 50px;
-//           width: 100%;
-//           padding: 0 0 0 10px;
-//           border-style: none;
-//           display: flex;
-          
-//           &__image{
-//             position: absolute;
-//             right: 10px;
-//             top: 10px;
-//             font-size: 1.3rem;
-//             }
-//         }
-//       }
-//       &__send-button{
-//         width: 100px;
-//         height: 50px;
-//         padding: 0 30px;
-//         margin-left: 15px;
-//         background-color: $header-button-color;
-//         color: white;
-//       }
-//     }
-//   }
-// }
