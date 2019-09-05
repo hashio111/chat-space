@@ -1,0 +1,43 @@
+@mixin form {
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 40px;
+    
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 115px);
+      box-sizing: border-box;
+      padding-left: 10px;
+      position: relative;
+      
+    }
+    &__mask {
+      width: 100%;
+      position: relative;
+      &__image {
+        font-size: 1.3rem;
+        line-height: 50px;
+        position: absolute;
+        right: 125px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      height: 50px;
+      width: 100px;
+      margin: 0 0 0 15px;
+      padding: 0 30px;
+      position: absolute;
+    }
+  }
+}
