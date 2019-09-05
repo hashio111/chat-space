@@ -4,22 +4,25 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 40px;
+    
     &__message {
       border: none;
       float: left;
       height: 50px;
-      width: calc(100% - 150px);
+      width: calc(100% - 110px);
       box-sizing: border-box;
       padding-left: 10px;
+      position: relative;
+      
     }
     &__mask {
-      background-color: $white;
-      float: left;
-      height: 50px;
-      padding-right: 10px;
+      width: 100%;
+      position: relative;
       &__image {
         font-size: 20px;
         line-height: 50px;
+        position: absolute;
+        right: 120px;
       }
       .hidden {
         display: none;
@@ -34,6 +37,7 @@
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+      position: absolute;
     }
   }
 }
