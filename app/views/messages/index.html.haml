@@ -6,7 +6,9 @@
         .chat-main__main-header__left-box__group-name
           = @group.name
         .chat-main__main-header__left-box__group-member
-          %p group-member
+          Member :
+          - @group.group_users.each do |group_users|
+            = group_users.user.name
       .chat-main__main-header__edit-button
         = link_to "/groups/#{@group.id}/edit" do
           %p Edit
