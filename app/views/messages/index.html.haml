@@ -4,17 +4,15 @@
     .chat-main__main-header
       .chat-main__main-header__left-box
         .chat-main__main-header__left-box__group-name
-          %p group-name
+          = @group.name
         .chat-main__main-header__left-box__group-member
           %p group-member
       .chat-main__main-header__edit-button
-        = link_to new_group_path do
+        = link_to "/groups/#{@group.id}/edit" do
           %p Edit
     .chat-main__messages
       = render @messages
     = render 'shared/chat-main_form'
-
-
 
 
   -#  .chat-main__messages
