@@ -40,7 +40,7 @@ $(function () {
         $(".chat-main__messages").append(html);
         $("#message_content").val("");
         $(".form__submit").prop("disabled", false);
-        $(".chat-main__message").animate({scrollTop: $(".chat-main__message")[0].scrollHeight}, "fast");
+        $(".chat-main__messages").animate({scrollTop: $(".chat-main__messages")[0].scrollHeight});
       })
       .fail(function () {
         alert("メッセージを入力してください");
