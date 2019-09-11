@@ -1,10 +1,7 @@
 $(function () {
 
   function buildMessage(message) {
-    var image = "";
-    if (message.image) {
-      image = `<img class="lower-message__image" src="${message.image}">`
-    }
+    var image = message.image ? `<img class="lower-message__image" src="${message.image}">` : '';
     var html = `<div class="chat-main__messages__upper-message">
     <div class="chat-main__messages__upper-message__user-name">
     ${message.user_name}
@@ -38,12 +35,12 @@ $(function () {
       .done(function (message) {
         var html = buildMessage(message);
         $(".chat-main__messages").append(html);
-        $("#message_content").val("");
-        $(".form__submit").prop("disabled", false);
         $(".chat-main__messages").animate({scrollTop: $(".chat-main__messages")[0].scrollHeight});
+        $("#new_message")[0].reset();
+        $(".form__submit").prop("disabled", false);
       })
       .fail(function () {
-        alert("メッセージを入力してください");
+        alert("メッセージか画像を入力してください");
         $(".form__submit").prop("disabled", false);
       })
   })
