@@ -16,11 +16,8 @@
       = f.label :チャットメンバーを追加,  class: "chat-group-form__label"
     .chat-group-form__field--right
       .chat-group-form__search.clearfix
-        = f.text_field :id, class: "chat-group-form__input", id: "user-search-field", placeholder: "追加したいユーザー名を入力してください"
+        %input#user-search-field.chat-group-form__input{placeholder: "追加したいユーザー名を入力してください", type: "text"}/
       #user-search-result
-
-
-
 
 
   .chat-group-form__field.clearfix
@@ -31,6 +28,7 @@
         .chat-group-user.clearfix
           %p.chat-group-user__name
             = current_user.name
+             
 
 
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
