@@ -32,16 +32,9 @@
           #chat-group-user-user.id.chat-group-user.clearfix.js-chat-member
             %input{name: "group[user_ids][]", type: "hidden", value: "user.id"}/
             %p.chat-group-user__name= user.name
-            %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
-
-
-
-      -# .chat-group-users
-      -#   .chat-group-user.clearfix
-      -#     %p.chat-group-user__name
-      -#       = current_user.name  
-     
-      / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
+            %a.user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除    
+      
+      
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
