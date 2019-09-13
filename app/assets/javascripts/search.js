@@ -1,6 +1,5 @@
 $(function() {
   var user_list = $("#user-search-result");
-  var member_list = $(".chat-group-user__name")
 
   function appendUser(user) {
     var html = `<div class="chat-group-user clearfix">
@@ -25,9 +24,6 @@ $(function() {
                 </div>`;
     return html;
   }
-
-
-
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
@@ -68,8 +64,4 @@ $(function() {
     $(this).parent().remove()
   });
 
-  // $(document).on('click', '.user-search-remove', function() {
-  //   var id = $(this).data('user-id');
-  //   $(`#chat-group-user-${id}`).remove();
-  // });
 });
