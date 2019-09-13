@@ -17,10 +17,7 @@ $(function() {
     user_list.append(html);
   };
 
- 
-
-
-  function buildHTML(id, name) {
+  function buildAddedUser(id, name) {
     var html = `<div class="chat-group-user clearfix js-chat-member" id="chat-group-user-${id}">
                   <input name="group[user_ids][]" type="hidden" value="${id}">
                   <p class="chat-group-user__name">${name}</p>
@@ -62,7 +59,7 @@ $(function() {
   $(document).on('click', '.user-search-add', function() {
     var id = $(this).data('user-id');
     var name = $(this).data('user-name');
-    var added_user = buildHTML(id, name);
+    var added_user = buildAddedUser(id, name);
     $('.chat-group-users').append(added_user);
     $(this).parent('.chat-group-user').remove();
   });

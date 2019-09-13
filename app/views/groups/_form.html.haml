@@ -22,15 +22,20 @@
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      %label.chat-group-form__label{for: "chat_group_チャットメンバー"} チャットメンバー
+      = f.label :チャットメンバー, class: "chat-group-form__label user_search_field", placeholder: 'チャットメンバーを追加'
     .chat-group-form__field--right
-      .chat-group-users
-        .chat-group-user.clearfix
-          %p.chat-group-user__name
-            = current_user.name
-             
+      .chat-group-users.js-add-user
+        #current_user.id.chat-group-user.clearfix.js-chat-member
+          %input#group_user_ids{name: "group[user_ids][]", type: "hidden", value: "#{current_user.id}"}/
+          %p.chat-group-user__name= current_user.name 
 
 
+
+      -# .chat-group-users
+      -#   .chat-group-user.clearfix
+      -#     %p.chat-group-user__name
+      -#       = current_user.name  
+     
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
