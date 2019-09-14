@@ -10,7 +10,7 @@
           - @group.group_users.each do |group_users|
             = group_users.user.name
       .chat-main__main-header__edit-button
-        = link_to "/groups/#{@group.id}/edit", class: "button" do
+        = link_to edit_group_path(@group[:id]), class: "button" do
           Edit
     .chat-main__messages
       = render @messages

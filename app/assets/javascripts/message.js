@@ -58,7 +58,6 @@ $(function() {
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log("success");
       messages.forEach(function(message) {
         var insertHTML = buildMessage(message);
         $(".chat-main__messages").append(insertHTML);
