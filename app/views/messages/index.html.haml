@@ -3,15 +3,15 @@
   .chat-main
     .chat-main__main-header
       .chat-main__main-header__left-box
-        .chat-main__main-header__left-box__group-name
+        .chat-main__main-header__left-box__group-name{"data-group-id": "#{@group.id}"}
           = @group.name
         .chat-main__main-header__left-box__group-member
           Member :
           - @group.group_users.each do |group_users|
             = group_users.user.name
       .chat-main__main-header__edit-button
-        = link_to "/groups/#{@group.id}/edit" do
-          %p Edit
+        = link_to "/groups/#{@group.id}/edit", class: "button" do
+          Edit
     .chat-main__messages
       = render @messages
     = render 'shared/chat-main_form'

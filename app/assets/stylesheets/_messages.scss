@@ -84,6 +84,9 @@
         right: 40px;
         color: $header-button-color;
       }
+      .button {
+        text-decoration: none;
+      }
     }
     &__messages{
       padding: 0 40px;
