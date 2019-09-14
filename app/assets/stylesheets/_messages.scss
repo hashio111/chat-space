@@ -84,6 +84,9 @@
         right: 40px;
         color: $header-button-color;
       }
+      .button {
+        text-decoration: none;
+      }
     }
     &__messages{
       padding: 0 40px;
@@ -110,6 +113,9 @@
         &__content{
           font-size: 14px;
           color: #434A54;
+          margin-bottom: 40px;
+        }
+        .lower-message__image {
           margin-bottom: 40px;
         }
       }
