@@ -23,9 +23,17 @@
           display: flex;
           &__new-group{
             margin-left: 0.3rem;
+            .pencil {
+              text-decoration: none;
+              color: white;
+            }
           }
           &__edit-user{
             margin-left: 0.3rem;
+            .cog {
+              text-decoration: none;
+              color: white;
+            }
           }
         }
       } 
@@ -74,18 +82,18 @@
         }
       }
       &__edit-button{
-        height: 40px;
-        line-height: 40px;
-        padding: 0 20px;
-        margin-top: 30px;
-        border: solid 1px $header-button-color;
-        box-sizing: border-box;
-        position: absolute;
-        right: 40px;
-        color: $header-button-color;
-      }
-      .button {
-        text-decoration: none;
+        .button {
+          text-decoration: none;
+          height: 40px;
+          line-height: 40px;
+          padding: 0 20px;
+          margin-top: 30px;
+          border: solid 1px $header-button-color;
+          box-sizing: border-box;
+          position: absolute;
+          right: 40px;
+          color: $header-button-color;
+        }
       }
     }
     &__messages{

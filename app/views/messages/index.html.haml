@@ -10,8 +10,7 @@
           - @group.group_users.each do |group_users|
             = group_users.user.name
       .chat-main__main-header__edit-button
-        = link_to edit_group_path(@group), class: "button" do
-          Edit
+        = link_to "Edit", edit_group_path(@group), class: "button"
     .chat-main__messages
       = render @messages
     = render 'shared/chat-main_form'
