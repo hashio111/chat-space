@@ -1,5 +1,4 @@
-$(function() {
-
+$(document).on("turbolinks:load", function() {
   function buildMessage(message) {
     var image = message.image ? `<img class="lower-message__image" src="${message.image}">` : '';
     var html = `<div class="chat-main__messages__box" data-message-id="${message.id}">
